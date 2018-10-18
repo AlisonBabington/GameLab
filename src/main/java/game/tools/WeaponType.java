@@ -15,6 +15,5 @@ public enum  WeaponType {
     public int getValue() {
         return value;
     }
-    public final int
 
 }

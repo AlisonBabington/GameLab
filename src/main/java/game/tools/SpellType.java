@@ -15,6 +15,6 @@ public enum  SpellType {
     public int getValue() {
         return value;
     }
-    public final int
+
 
 }
