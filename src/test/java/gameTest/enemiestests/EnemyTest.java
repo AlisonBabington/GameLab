@@ -5,8 +5,5 @@ import org.junit.Before;
 
 public class EnemyTest {
 
-    Enemy enemy;
-
-    @Before
 
 }
