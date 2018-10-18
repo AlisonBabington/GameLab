@@ -1,3 +1,4 @@
+
 package game.tools;
 
 public enum  WeaponType {
