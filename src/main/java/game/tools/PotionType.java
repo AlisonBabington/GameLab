@@ -1,15 +1,15 @@
-
 package game.tools;
 
-public enum  WeaponType {
+public enum  PotionType {
 
-    SWORD(20),
-    AXE(10),
-    CLUB(5);
+    HEALPOTION1(40),
+    HEALPOTION2(30),
+    HEALPOTION3(20),
+    HEALPOTION4(10);
 
     private final int value;
 
-    WeaponType(int value) {
+    PotionType(int value) {
         this.value = value;
     }
 

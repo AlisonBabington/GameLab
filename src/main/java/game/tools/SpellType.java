@@ -1,20 +1,20 @@
-
 package game.tools;
 
-public enum  WeaponType {
+public enum  SpellType {
 
-    SWORD(20),
-    AXE(10),
-    CLUB(5);
+    ATTACK_SPELL(15),
+    DEFEND_SPELL(10);
+
 
     private final int value;
 
-    WeaponType(int value) {
+    SpellType(int value) {
         this.value = value;
     }
 
     public int getValue() {
         return value;
     }
+
 
 }

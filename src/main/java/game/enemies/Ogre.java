@@ -1,4 +1,4 @@
 package game.enemies;
 
-public class enemy {
+public class Ogre {
 }
