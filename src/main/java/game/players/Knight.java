@@ -4,27 +4,21 @@ import game.IAttack;
 import game.IDefend;
 import game.tools.WeaponType;
 
-
-
-public class Dwarf extends Player implements IAttack, IDefend{
+public class Knight extends Player implements IDefend, IAttack {
 
     private String name;
-    private WeaponType weapon1;
-    private WeaponType weapon2;
+    private WeaponType weapon;
 
-
-
-    public Dwarf (String name, WeaponType weapon1, WeaponType weapon2) {
+    public Knight(String name, WeaponType weapon) {
         this.name = name;
-        this.weapon1 = weapon1;
-        this.weapon2 = weapon2;
+        this.weapon = weapon;
     }
+
 
     @Override
     public int attack() {
-        return getWeaponOne().getValue() + getWeaponTwo().getValue();
+        return weapon.getValue();
     }
-
 
     @Override
     public void isOpponentDefeated() {
@@ -38,7 +32,7 @@ public class Dwarf extends Player implements IAttack, IDefend{
 
     @Override
     public String getHurt(int hitPoints) {
-        setHealthpoints(getHealthpoints() - hitPoints);
+        setHealthpoints(getHealthpoints() - hitPoints / 2);
         if (die()) return "Argh, I have died";
         return "Ouch, that hurt!";
     }
@@ -53,11 +47,7 @@ public class Dwarf extends Player implements IAttack, IDefend{
         return name;
     }
 
-    public WeaponType getWeaponOne() {
-        return weapon1;
-    }
-
-    public WeaponType getWeaponTwo() {
-        return weapon2;
+    public WeaponType getWeapon() {
+        return weapon;
     }
 }
