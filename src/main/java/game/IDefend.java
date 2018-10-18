@@ -2,6 +2,6 @@ package game;
 
 public interface IDefend {
    void defendSelf();
-   void getHurt(int hitPoints);
+   String getHurt(int hitPoints);
    boolean die();
 }

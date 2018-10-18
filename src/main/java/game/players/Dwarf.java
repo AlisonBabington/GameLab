@@ -37,8 +37,10 @@ public class Dwarf extends Player implements IAttack, IDefend{
     }
 
     @Override
-    public void getHurt(int hitPoints) {
+    public String getHurt(int hitPoints) {
         setHealthpoints(getHealthpoints() - hitPoints);
+        if (die()) return "Argh, I have died";
+        return "Ouch, that hurt!";
     }
 
     @Override
