@@ -41,7 +41,10 @@ public class DwarfTest {
     }
 
 
-
+    @Test
+    public void canAttack() {
+        assertEquals(15, dwarf.attack());
+    }
 
 
 }
