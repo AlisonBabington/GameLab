@@ -1,6 +1,6 @@
 package game;
 
 public interface IAttack {
-    int attack();
+    void attack(IDefend attack);
     void isOpponentDefeated();
 }

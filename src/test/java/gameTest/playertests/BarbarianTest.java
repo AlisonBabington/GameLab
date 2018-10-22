@@ -1,5 +1,6 @@
 package gameTest.playertests;
 
+import game.enemies.Ogre;
 import game.players.Barbarian;
 import game.tools.WeaponType;
 import org.junit.Before;
@@ -10,10 +11,12 @@ import static org.junit.Assert.assertEquals;
 public class BarbarianTest {
 
     Barbarian barbarian;
+    Ogre ogre;
 
     @Before
     public void before() {
         barbarian = new Barbarian("Obelix", WeaponType.SWORD);
+        ogre = new Ogre(80, WeaponType.SWORD);
     }
 
     @Test
@@ -28,7 +31,8 @@ public class BarbarianTest {
 
     @Test
     public void canAttack() {
-        assertEquals(40, barbarian.attack());
+        barbarian.attack(ogre);
+        assertEquals(40, ogre.getHealthpoints());
     }
 
     @Test

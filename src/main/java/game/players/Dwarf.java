@@ -21,8 +21,9 @@ public class Dwarf extends Player implements IAttack, IDefend{
     }
 
     @Override
-    public int attack() {
-        return getWeaponOne().getValue() + getWeaponTwo().getValue();
+    public void attack(IDefend enemy) {
+        int hitPoints = getWeaponOne().getValue() + getWeaponTwo().getValue();
+        enemy.getHurt(hitPoints);
     }
 
 

@@ -1,5 +1,7 @@
 package game.players;
 
+import game.enemies.Enemy;
+
 public abstract class Player {
 
     private int healthpoints;
@@ -25,4 +27,7 @@ public abstract class Player {
     public void setCoins(int coins) {
         this.coins = coins;
     }
+
+    
+
 }

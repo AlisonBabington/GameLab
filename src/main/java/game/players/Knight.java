@@ -2,6 +2,7 @@ package game.players;
 
 import game.IAttack;
 import game.IDefend;
+import game.enemies.Enemy;
 import game.tools.WeaponType;
 
 public class Knight extends Player implements IDefend, IAttack {
@@ -16,9 +17,13 @@ public class Knight extends Player implements IDefend, IAttack {
 
 
     @Override
-    public int attack() {
-        return weapon.getValue();
+    public void attack(IDefend enemy) {
+        int hitPoints = weapon.getValue();
+        enemy.getHurt(hitPoints);
     }
+
+
+
 
     @Override
     public void isOpponentDefeated() {
@@ -29,6 +34,7 @@ public class Knight extends Player implements IDefend, IAttack {
     public void defendSelf() {
 
     }
+
 
     @Override
     public String getHurt(int hitPoints) {

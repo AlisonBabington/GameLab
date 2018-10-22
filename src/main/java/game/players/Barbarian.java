@@ -16,8 +16,9 @@ public class Barbarian extends Player implements IAttack, IDefend {
     }
 
     @Override
-    public int attack() {
-        return weapon.getValue() * 2;
+    public void attack(IDefend enemy) {
+            int hitPoints = weapon.getValue() * 2;
+            enemy.getHurt(hitPoints);
     }
 
     @Override

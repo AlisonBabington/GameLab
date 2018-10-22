@@ -1,5 +1,6 @@
 package gameTest.playertests;
 
+import game.enemies.Ogre;
 import game.players.Dwarf;
 import game.tools.WeaponType;
 import org.junit.Before;
@@ -10,11 +11,13 @@ import static org.junit.Assert.assertEquals;
 public class DwarfTest {
 
     Dwarf dwarf;
+    Ogre ogre;
 
 
     @Before
     public void before() {
         dwarf = new Dwarf("Asterix", WeaponType.AXE, WeaponType.CLUB);
+        ogre = new Ogre(80, WeaponType.SWORD);
     }
 
     @Test
@@ -43,7 +46,8 @@ public class DwarfTest {
 
     @Test
     public void canAttack() {
-        assertEquals(15, dwarf.attack());
+        dwarf.attack(ogre);
+        assertEquals(65, ogre.getHealthpoints());
     }
 
 
